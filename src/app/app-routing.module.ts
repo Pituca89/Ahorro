@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: '', redirectTo:'login', pathMatch:'full'},
+  { path: 'login', loadChildren:  './google-login/google-login.module#GoogleLoginPageModule' ,},
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  
 ];
 @NgModule({
   imports: [

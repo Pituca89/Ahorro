@@ -1,9 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content></ion-content>
+<ion-content>
+    <ion-card>
+        <div *ngIf="userReady">
+          <ion-img [src]="user.picture" ></ion-img>
+          <ion-card-header>
+          <ion-card-title>{{user.name}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{user.email}}</p>
+          </ion-card-content> 
+        </div> 
+        <ion-button expand="block" (click)="signOut()">Log Out</ion-button>
+    </ion-card>
+  </ion-content>
